@@ -1,7 +1,7 @@
 import React, { useRef } from 'react'
 import ProductCard from './ProductCard'
 
-export default function ProductSection({ title, subtitle, products, sectionId }) {
+export default function ProductSection({ title, subtitle, products, sectionId, className = '' }) {
   const scrollRef = useRef(null)
 
   const scroll = (direction) => {
@@ -10,7 +10,7 @@ export default function ProductSection({ title, subtitle, products, sectionId })
   }
 
   return (
-    <section className="product-section" id={sectionId}>
+    <section className={`product-section${className ? ` ${className}` : ''}`} id={sectionId}>
       <div className="section-header">
         <div className="section-title">
           <h2>{title}</h2>

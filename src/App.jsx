@@ -1,25 +1,23 @@
-import React, { useLayoutEffect, useState } from 'react'
+import React from 'react'
+import { Route, Routes } from 'react-router-dom'
 import Header from './components/Header'
 import Sidebar from './components/Sidebar'
 import Home from './pages/Home'
+import Orders from './pages/Orders'
+import ProductDetails from './pages/ProductDetails'
 
 export default function App() {
-  const [theme, setTheme] = useState(() => localStorage.getItem('theme') || 'dark')
-
-  useLayoutEffect(() => {
-    document.documentElement.setAttribute('data-theme', theme)
-    localStorage.setItem('theme', theme)
-  }, [theme])
-
-  const toggleTheme = () => setTheme((t) => (t === 'dark' ? 'light' : 'dark'))
-
   return (
     <div className="app">
       <main className="main-content">
-        <Header theme={theme} onToggleTheme={toggleTheme} />
+        <Header />
 
         <div className="page-wrapper">
-          <Home />
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/product/:slug" element={<ProductDetails />} />
+            <Route path="/orders" element={<Orders />} />
+          </Routes>
         </div>
       </main>
 

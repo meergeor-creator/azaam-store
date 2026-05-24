@@ -1,0 +1,58 @@
+export const localProductOverrides = [
+  {
+    supplierProductId: 'digital-pack-small',
+    supplierName: 'mock-supplier',
+    displayName: 'Starter Credit Pack',
+    category: 'special-offers',
+    subCategory: 'digital-currency',
+    visible: true,
+    image: '',
+    badge: 'Instant',
+    accent: '#82c99a',
+    sortOrder: 10,
+    profitMargin: 0.12,
+    metadata: {
+      featured: true,
+    },
+  },
+  {
+    supplierProductId: 'digital-pack-medium',
+    supplierName: 'mock-supplier',
+    displayName: 'Popular Credit Pack',
+    visible: true,
+    badge: 'Popular',
+    gradient: 'linear-gradient(135deg, #7db7c9 0%, rgba(8,12,22,0.92) 72%)',
+    sortOrder: 20,
+    profitMargin: 0.15,
+    metadata: {
+      featured: true,
+    },
+  },
+  {
+    supplierProductId: 'season-pass-plus',
+    supplierName: 'mock-supplier',
+    displayName: 'Extended Season Access',
+    visible: true,
+    badge: 'Value',
+    sortOrder: 5,
+    profitMargin: 0.1,
+    metadata: {
+      featured: false,
+    },
+  },
+  {
+    supplierProductId: 'starter-game-key',
+    supplierName: 'mock-supplier',
+    visible: false,
+    sortOrder: 99,
+  },
+  {
+    supplierProductId: 'premium-game-key',
+    supplierName: 'mock-supplier',
+    displayName: 'Premium Digital Key',
+    visible: true,
+    badge: 'Top',
+    sortOrder: 5,
+    profitMargin: 0.18,
+  },
+]
